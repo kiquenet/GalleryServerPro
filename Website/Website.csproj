@@ -1,0 +1,1082 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6CBE28C-CAD6-4FC9-9C2D-B5B2DE35A33D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalleryServerPro.Web</RootNamespace>
+    <AssemblyName>GalleryServerPro.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.1.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\gsp-ftr-logo-170x46.png" />
+    <EmbeddedResource Include="App_GlobalResources\RogerMartin&amp;Family.jpg" />
+    <Content Include="gs\pages\admin\mediatemplates.ascx" />
+    <Content Include="gs\pages\eula-commercial.htm" />
+    <Content Include="gs\script\debug\jquery-migrate.js" />
+    <Content Include="gs\script\flowplayer-3.2.12.min.js" />
+    <Content Include="gs\script\flowplayer-3.2.16.swf" />
+    <Content Include="gs\script\flowplayer.controls-3.2.15.swf" />
+    <Content Include="gs\script\html5shiv.min.js" />
+    <Content Include="gs\script\jquery-migrate.min.js" />
+    <Content Include="gs\script\MicrosoftAjax.js" />
+    <Content Include="gs\script\plupload\jquery.ui.plupload.min.js" />
+    <Content Include="gs\script\plupload\plupload.full.min.js" />
+    <Content Include="gs\skins\dark\images\arrow-right-open-s-o.png" />
+    <Content Include="gs\skins\dark\images\delete-red-s.png" />
+    <Content Include="gs\skins\dark\images\down-arrow-s.png" />
+    <Content Include="gs\skins\dark\images\gsp-logo.png" />
+    <Content Include="gs\skins\dark\images\help_s.png" />
+    <Content Include="gs\skins\dark\images\link-s.png" />
+    <Content Include="gs\skins\dark\images\net4_browser_ids.png" />
+    <Content Include="gs\skins\dark\images\play-ss-m.png" />
+    <Content Include="default.aspx" />
+    <Content Include="gs\controls\albumtreeview.ascx" />
+    <Content Include="gs\controls\mediaview.ascx" />
+    <Content Include="gs\script\debug\grid.js" />
+    <Content Include="gs\skins\dark\images\add-objects-s-o.png" />
+    <Content Include="gs\skins\dark\images\check-s.png" />
+    <Content Include="gs\skins\dark\images\collapse-s-o.png" />
+    <Content Include="gs\skins\dark\images\play-ss-l.png" />
+    <Content Include="gs\skins\dark\images\rateit\delete.gif" />
+    <Content Include="gs\skins\dark\images\download-zip-m.png" />
+    <Content Include="gs\skins\dark\images\link-m.png" />
+    <Content Include="gs\skins\dark\images\lock-active-s.png" />
+    <Content Include="gs\skins\dark\images\lock-s.png" />
+    <Content Include="gs\skins\dark\images\move-updown-s.png" />
+    <Content Include="gs\skins\dark\images\plupload\backgrounds.gif" />
+    <Content Include="gs\skins\dark\images\plupload\buttons-disabled.png" />
+    <Content Include="gs\skins\dark\images\plupload\buttons.png" />
+    <Content Include="gs\skins\dark\images\plupload\delete.gif" />
+    <Content Include="gs\skins\dark\images\plupload\done.gif" />
+    <Content Include="gs\skins\dark\images\plupload\error.gif" />
+    <Content Include="gs\skins\dark\images\plupload\throbber.gif" />
+    <Content Include="gs\skins\dark\images\plupload\transp50.png" />
+    <Content Include="gs\skins\dark\images\rateit\star.png" />
+    <Content Include="gs\skins\dark\images\right-arrow-s.png" />
+    <Content Include="gs\skins\dark\images\rss-l.png" />
+    <Content Include="gs\skins\dark\images\rss-m.png" />
+    <Content Include="gs\skins\dark\images\rss-s.png" />
+    <Content Include="gs\skins\dark\images\spinner.gif" />
+    <Content Include="gs\skins\dark\images\sun-s-o.png" />
+    <Content Include="gs\skins\dark\images\supersized\back.png" />
+    <Content Include="gs\skins\dark\images\supersized\bg-black.png" />
+    <Content Include="gs\skins\dark\images\supersized\bg-hover.png" />
+    <Content Include="gs\skins\dark\images\supersized\button-tray-down.png" />
+    <Content Include="gs\skins\dark\images\supersized\button-tray-up.png" />
+    <Content Include="gs\skins\dark\images\supersized\forward.png" />
+    <Content Include="gs\skins\dark\images\supersized\nav-bg.png" />
+    <Content Include="gs\skins\dark\images\supersized\nav-dot.png" />
+    <Content Include="gs\skins\dark\images\supersized\pause.png" />
+    <Content Include="gs\skins\dark\images\supersized\play.png" />
+    <Content Include="gs\skins\dark\images\supersized\progress-back.png" />
+    <Content Include="gs\skins\dark\images\supersized\progress-bar.png" />
+    <Content Include="gs\skins\dark\images\supersized\progress.gif" />
+    <Content Include="gs\skins\dark\images\supersized\stop.png" />
+    <Content Include="gs\skins\dark\images\supersized\thumb-back.png" />
+    <Content Include="gs\skins\dark\images\supersized\thumb-forward.png" />
+    <Content Include="gs\skins\dark\images\user-s.png" />
+    <Content Include="gs\skins\dark\styles\32px.png" />
+    <Content Include="gs\skins\dark\styles\40px.png" />
+    <Content Include="gs\skins\dark\styles\images\animated-overlay.gif" />
+    <Content Include="gs\skins\dark\styles\slick.grid.css" />
+    <Content Include="gs\skins\light\images\add-album-s.png" />
+    <Content Include="gs\skins\light\images\add-objects-s-o.png" />
+    <Content Include="gs\skins\light\images\add-objects-s.png" />
+    <Content Include="gs\skins\light\images\arrow-left-l.png" />
+    <Content Include="gs\skins\light\images\arrow-right-l.png" />
+    <Content Include="gs\skins\light\images\arrow-right-open-s-o.png" />
+    <Content Include="gs\skins\light\images\arrow-right-open-s.png" />
+    <Content Include="gs\skins\light\images\assign-thumbnail-s.png" />
+    <Content Include="gs\skins\light\images\check-s.png" />
+    <Content Include="gs\skins\light\images\collapse-s-o.png" />
+    <Content Include="gs\skins\light\images\collapse-s.png" />
+    <Content Include="gs\skins\light\images\copy-album-s.png" />
+    <Content Include="gs\skins\light\images\copy-s.png" />
+    <Content Include="gs\skins\light\images\delete-highres-s.png" />
+    <Content Include="gs\skins\light\images\delete-red-s.png" />
+    <Content Include="gs\skins\light\images\delete-s.png" />
+    <Content Include="gs\skins\light\images\down-arrow-s-o.png" />
+    <Content Include="gs\skins\light\images\down-arrow-s.png" />
+    <Content Include="gs\skins\light\images\download-zip-m.png" />
+    <Content Include="gs\skins\light\images\download-zip-s.png" />
+    <Content Include="gs\skins\light\images\edit-captions-s.png" />
+    <Content Include="gs\skins\light\images\error-l.png" />
+    <Content Include="gs\skins\light\images\error-s.png" />
+    <Content Include="gs\skins\light\images\error-xl.png" />
+    <Content Include="gs\skins\light\images\expand.png" />
+    <Content Include="gs\skins\light\images\green-check-xs.png" />
+    <Content Include="gs\skins\light\images\gsp-logo.png" />
+    <Content Include="gs\skins\light\images\help_s.png" />
+    <Content Include="gs\skins\light\images\home-l.png" />
+    <Content Include="gs\skins\light\images\info-l.png" />
+    <Content Include="gs\skins\light\images\info-s.png" />
+    <Content Include="gs\skins\light\images\link-m.png" />
+    <Content Include="gs\skins\light\images\link-s.png" />
+    <Content Include="gs\skins\light\images\lock-active-s.png" />
+    <Content Include="gs\skins\light\images\lock-m.png" />
+    <Content Include="gs\skins\light\images\lock-s.png" />
+    <Content Include="gs\skins\light\images\logoff-l.png" />
+    <Content Include="gs\skins\light\images\logoff-s.png" />
+    <Content Include="gs\skins\light\images\menu-group-background.gif" />
+    <Content Include="gs\skins\light\images\move-s.png" />
+    <Content Include="gs\skins\light\images\move-updown-s.png" />
+    <Content Include="gs\skins\light\images\net4_browser_ids.png" />
+    <Content Include="gs\skins\light\images\ok-s.png" />
+    <Content Include="gs\skins\light\images\pause-m.png" />
+    <Content Include="gs\skins\light\images\play-ss-l.png" />
+    <Content Include="gs\skins\light\images\play-ss-m.png" />
+    <Content Include="gs\skins\light\images\plupload\backgrounds.gif" />
+    <Content Include="gs\skins\light\images\plupload\buttons-disabled.png" />
+    <Content Include="gs\skins\light\images\plupload\buttons.png" />
+    <Content Include="gs\skins\light\images\plupload\delete.gif" />
+    <Content Include="gs\skins\light\images\plupload\done.gif" />
+    <Content Include="gs\skins\light\images\plupload\error.gif" />
+    <Content Include="gs\skins\light\images\plupload\throbber.gif" />
+    <Content Include="gs\skins\light\images\plupload\transp50.png" />
+    <Content Include="gs\skins\light\images\rateit\delete.gif" />
+    <Content Include="gs\skins\light\images\rateit\star.png" />
+    <Content Include="gs\skins\light\images\right-arrow-s.png" />
+    <Content Include="gs\skins\light\images\rotate-s.png" />
+    <Content Include="gs\skins\light\images\rotate\arrowtop.gif" />
+    <Content Include="gs\skins\light\images\rotate\bottom.gif" />
+    <Content Include="gs\skins\light\images\rotate\bottom1.gif" />
+    <Content Include="gs\skins\light\images\rotate\left.gif" />
+    <Content Include="gs\skins\light\images\rotate\left1.gif" />
+    <Content Include="gs\skins\light\images\rotate\right.gif" />
+    <Content Include="gs\skins\light\images\rotate\right1.gif" />
+    <Content Include="gs\skins\light\images\rotate\top.gif" />
+    <Content Include="gs\skins\light\images\rotate\top1.gif" />
+    <Content Include="gs\skins\light\images\rss-l.png" />
+    <Content Include="gs\skins\light\images\rss-m.png" />
+    <Content Include="gs\skins\light\images\rss-s.png" />
+    <Content Include="gs\skins\light\images\search-l.png" />
+    <Content Include="gs\skins\light\images\site-admin-s.png" />
+    <Content Include="gs\skins\light\images\spinner.gif" />
+    <Content Include="gs\skins\light\images\sun-s-o.png" />
+    <Content Include="gs\skins\light\images\sun-s.png" />
+    <Content Include="gs\skins\light\images\supersized\back.png" />
+    <Content Include="gs\skins\light\images\supersized\bg-black.png" />
+    <Content Include="gs\skins\light\images\supersized\bg-hover.png" />
+    <Content Include="gs\skins\light\images\supersized\button-tray-down.png" />
+    <Content Include="gs\skins\light\images\supersized\button-tray-up.png" />
+    <Content Include="gs\skins\light\images\supersized\forward.png" />
+    <Content Include="gs\skins\light\images\supersized\nav-bg.png" />
+    <Content Include="gs\skins\light\images\supersized\nav-dot.png" />
+    <Content Include="gs\skins\light\images\supersized\pause.png" />
+    <Content Include="gs\skins\light\images\supersized\play.png" />
+    <Content Include="gs\skins\light\images\supersized\progress-back.png" />
+    <Content Include="gs\skins\light\images\supersized\progress-bar.png" />
+    <Content Include="gs\skins\light\images\supersized\progress.gif" />
+    <Content Include="gs\skins\light\images\supersized\stop.png" />
+    <Content Include="gs\skins\light\images\supersized\thumb-back.png" />
+    <Content Include="gs\skins\light\images\supersized\thumb-forward.png" />
+    <Content Include="gs\skins\light\images\sync-s.png" />
+    <Content Include="gs\skins\light\images\user-l.png" />
+    <Content Include="gs\skins\light\images\user-s.png" />
+    <Content Include="gs\skins\light\images\wait-squares.gif" />
+    <Content Include="gs\skins\light\images\warning-s.png" />
+    <Content Include="gs\skins\light\styles\32px.png" />
+    <Content Include="gs\skins\light\styles\40px.png" />
+    <Content Include="gs\skins\light\styles\gallery.css" />
+    <Content Include="gs\skins\light\styles\images\animated-overlay.gif" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="gs\skins\light\styles\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="gs\skins\light\styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="gs\skins\light\styles\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="gs\skins\light\styles\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="gs\skins\light\styles\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="gs\skins\light\styles\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="gs\skins\light\styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="gs\skins\light\styles\images\vdockbar-trans.gif" />
+    <Content Include="gs\skins\light\styles\images\vgrabber.gif" />
+    <Content Include="gs\skins\light\styles\jquery-ui.css" />
+    <Content Include="gs\skins\light\styles\slick.grid.css" />
+    <Content Include="gs\skins\light\styles\throbber.gif" />
+    <Content Include="CodeFiles\Entity\_EntityClassDiagram2.cd" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
+    <Content Include="gs\embed.aspx" />
+    <Content Include="gs\pages\admin\uitemplates.ascx" />
+    <Content Include="gs\pages\admin\css.ascx" />
+    <Content Include="gs\pages\media.ascx" />
+    <Content Include="gs\script\debug\html5shiv.js" />
+    <Content Include="gs\script\debug\jquery.js" />
+    <Content Include="gs\script\debug\lib.js" />
+    <Content Include="gs\script\jquery.min.js" />
+    <Content Include="gs\script\gallery.min.js" />
+    <Content Include="gs\script\jquery-ui.min.js" />
+    <Content Include="gs\script\lib.min.js" />
+    <Content Include="gs\skins\dark\images\arrow-right-open-s.png" />
+    <Content Include="gs\skins\dark\images\collapse-s.png" />
+    <Content Include="gs\skins\dark\images\down-arrow-s-o.png" />
+    <Content Include="gs\skins\dark\images\expand.png" />
+    <Content Include="gs\skins\dark\images\green-check-xs.png" />
+    <Content Include="gs\skins\dark\images\add-objects-s.png" />
+    <Content Include="gs\skins\dark\images\arrow-left-l.png" />
+    <Content Include="gs\skins\dark\images\arrow-right-l.png" />
+    <Content Include="gs\skins\dark\images\assign-thumbnail-s.png" />
+    <Content Include="gs\skins\dark\images\error-s.png" />
+    <Content Include="gs\skins\dark\images\error-l.png" />
+    <Content Include="gs\skins\dark\images\error-xl.png" />
+    <Content Include="gs\skins\dark\images\info-l.png" />
+    <Content Include="gs\skins\dark\images\copy-s.png" />
+    <Content Include="gs\skins\dark\images\copy-album-s.png" />
+    <Content Include="gs\skins\dark\images\add-album-s.png" />
+    <Content Include="gs\skins\dark\images\delete-s.png" />
+    <Content Include="gs\skins\dark\images\delete-highres-s.png" />
+    <Content Include="gs\skins\dark\images\download-zip-s.png" />
+    <Content Include="gs\skins\dark\images\edit-captions-s.png" />
+    <Content Include="gs\skins\dark\images\menu-group-background.gif" />
+    <Content Include="gs\skins\dark\images\home-l.png" />
+    <Content Include="gs\skins\dark\images\info-s.png" />
+    <Content Include="gs\skins\dark\images\lock-m.png" />
+    <Content Include="gs\skins\dark\images\logoff-s.png" />
+    <Content Include="gs\skins\dark\images\logoff-l.png" />
+    <Content Include="gs\skins\dark\images\ok-s.png" />
+    <Content Include="gs\skins\dark\images\pause-m.png" />
+    <Content Include="gs\skins\dark\images\search-l.png" />
+    <Content Include="gs\skins\dark\images\move-s.png" />
+    <Content Include="gs\skins\dark\images\rotate-s.png" />
+    <Content Include="gs\skins\dark\images\site-admin-s.png" />
+    <Content Include="gs\skins\dark\images\sun-s.png" />
+    <Content Include="gs\skins\dark\images\sync-s.png" />
+    <Content Include="gs\skins\dark\images\user-l.png" />
+    <Content Include="gs\pages\admin\metadata.ascx" />
+    <Content Include="gs\pages\admin\galleries.ascx" />
+    <Content Include="gs\pages\admin\gallerycontrolsettings.ascx" />
+    <Content Include="gs\pages\admin\gallerysettings.ascx" />
+    <Content Include="gs\pages\albumtreeview.ascx" />
+    <Content Include="gs\handler\getmedia.ashx" />
+    <Content Include="gs\handler\upload.ashx" />
+    <Content Include="gs\handler\Web.config" />
+    <None Include="CodeFiles\Entity\_EntityClassDiagram.cd" />
+    <Content Include="gs\skins\dark\styles\images\vdockbar-trans.gif" />
+    <Content Include="gs\skins\dark\styles\images\vgrabber.gif" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="galleryserverpro.targets">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="gs\script\debug\gallery.js" />
+    <Content Include="gs\script\debug\jquery.intellisense.js" />
+    <Content Include="gs\script\debug\jquery-ui.js" />
+    <Content Include="gs\script\plupload\Moxie.swf" />
+    <Content Include="gs\script\plupload\Moxie.xap" />
+    <Content Include="gs\skins\dark\images\wait-squares.gif" />
+    <Content Include="gs\skins\dark\images\warning-s.png" />
+    <Content Include="gs\skins\dark\images\rotate\arrowtop.gif" />
+    <Content Include="gs\skins\dark\images\rotate\bottom.gif" />
+    <Content Include="gs\skins\dark\images\rotate\bottom1.gif" />
+    <Content Include="gs\skins\dark\images\rotate\left.gif" />
+    <Content Include="gs\skins\dark\images\rotate\left1.gif" />
+    <Content Include="gs\skins\dark\images\rotate\right.gif" />
+    <Content Include="gs\skins\dark\images\rotate\right1.gif" />
+    <Content Include="gs\skins\dark\images\rotate\top.gif" />
+    <Content Include="gs\skins\dark\images\rotate\top1.gif" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="gs\skins\dark\styles\jquery-ui.css" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-icons_a83300_256x240.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="gs\skins\dark\styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="gs\skins\dark\styles\throbber.gif" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\GalleryServerPro.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalleryServerPro.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeFiles\AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\Api\FeedController.cs" />
+    <Compile Include="CodeFiles\Api\UsersController.cs" />
+    <Compile Include="CodeFiles\Api\RolesController.cs" />
+    <Compile Include="CodeFiles\Api\EventsController.cs" />
+    <Compile Include="CodeFiles\Api\MediaQueueItemController.cs" />
+    <Compile Include="CodeFiles\Api\TaskController.cs" />
+    <Compile Include="CodeFiles\Api\GalleryItemMetaController.cs" />
+    <Compile Include="CodeFiles\Api\MediaItemsController.cs" />
+    <Compile Include="CodeFiles\Api\MetaController.cs" />
+    <Compile Include="CodeFiles\Controller\AlbumController.cs" />
+    <Compile Include="CodeFiles\Controller\AlbumTreeViewBuilder.cs" />
+    <Compile Include="CodeFiles\Controller\AppEventController.cs" />
+    <Compile Include="CodeFiles\Controller\GalleryController.cs" />
+    <Compile Include="CodeFiles\Api\AlbumsController.cs" />
+    <Compile Include="CodeFiles\Controller\MediaEncoderSettingsController.cs" />
+    <Compile Include="CodeFiles\Controller\MetadataController.cs" />
+    <Compile Include="CodeFiles\Controller\ResourceController.cs" />
+    <Compile Include="CodeFiles\Controller\EmailController.cs" />
+    <Compile Include="CodeFiles\Controller\GalleryObjectController.cs" />
+    <Compile Include="CodeFiles\Controller\ProfileController.cs" />
+    <Compile Include="CodeFiles\Controller\UserController.cs" />
+    <Compile Include="CodeFiles\Entity\AlbumAction.cs" />
+    <Compile Include="CodeFiles\Entity\MimeType.cs" />
+    <Compile Include="CodeFiles\Entity\SyncOptions.cs" />
+    <Compile Include="CodeFiles\Entity\MetaItem.cs" />
+    <Compile Include="CodeFiles\Entity\GalleryItem.cs" />
+    <Compile Include="CodeFiles\Entity\Resource.cs" />
+    <Compile Include="CodeFiles\GalleryPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\Gallery.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\Entity\App.cs" />
+    <Compile Include="CodeFiles\Entity\Role.cs" />
+    <Compile Include="CodeFiles\Entity\TreeView.cs" />
+    <Compile Include="CodeFiles\Entity\User.cs" />
+    <Compile Include="CodeFiles\Entity\DisplayObject.cs" />
+    <Compile Include="CodeFiles\Entity\EmailTemplate.cs" />
+    <Compile Include="CodeFiles\Controller\RoleController.cs" />
+    <Compile Include="CodeFiles\Entity\MediaEncoderSettings.cs" />
+    <Compile Include="CodeFiles\Entity\GalleryData.cs" />
+    <Compile Include="CodeFiles\Entity\Settings.cs" />
+    <Compile Include="CodeFiles\Entity\Permissions.cs" />
+    <Compile Include="CodeFiles\HttpModule\GspHttpApplication.cs" />
+    <Compile Include="CodeFiles\TaskPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodeFiles\wwDataBinder\BindingErrors.cs" />
+    <Compile Include="CodeFiles\wwDataBinder\BindingExceptions.cs" />
+    <Compile Include="CodeFiles\wwDataBinder\IwwDataBinder.cs" />
+    <Compile Include="CodeFiles\wwDataBinder\wwDataBinder.cs" />
+    <Compile Include="CodeFiles\wwDataBinder\wwDataBindingItem.cs" />
+    <Compile Include="CodeFiles\wwDataBinder\wwDataBindingItemCollection.cs" />
+    <Compile Include="CodeFiles\wwDataBinder\wwUtils.cs" />
+    <Compile Include="gs\controls\actionmenu.ascx.cs">
+      <DependentUpon>actionmenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\actionmenu.ascx.designer.cs">
+      <DependentUpon>actionmenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\admin\adminfooter.ascx.cs">
+      <DependentUpon>adminfooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\admin\adminfooter.ascx.designer.cs">
+      <DependentUpon>adminfooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\admin\adminheader.ascx.cs">
+      <DependentUpon>adminheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\admin\adminheader.ascx.designer.cs">
+      <DependentUpon>adminheader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\admin\adminmenu.ascx.cs">
+      <DependentUpon>adminmenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\admin\adminmenu.ascx.designer.cs">
+      <DependentUpon>adminmenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\albummenu.ascx.cs">
+      <DependentUpon>albummenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\albummenu.ascx.designer.cs">
+      <DependentUpon>albummenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeFiles\GalleryUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\albumtreeview.ascx.cs">
+      <DependentUpon>albumtreeview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\albumtreeview.ascx.designer.cs">
+      <DependentUpon>albumtreeview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\galleryheader.ascx.cs">
+      <DependentUpon>galleryheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\galleryheader.ascx.designer.cs">
+      <DependentUpon>galleryheader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\mediaview.ascx.cs">
+      <DependentUpon>mediaview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\mediaview.ascx.designer.cs">
+      <DependentUpon>mediaview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\pager.ascx.cs">
+      <DependentUpon>pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\pager.ascx.designer.cs">
+      <DependentUpon>pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\task\taskfooter.ascx.cs">
+      <DependentUpon>taskfooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\task\taskfooter.ascx.designer.cs">
+      <DependentUpon>taskfooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\task\taskheader.ascx.cs">
+      <DependentUpon>taskheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\task\taskheader.ascx.designer.cs">
+      <DependentUpon>taskheader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\controls\thumbnailview.ascx.cs">
+      <DependentUpon>thumbnailview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\controls\thumbnailview.ascx.designer.cs">
+      <DependentUpon>thumbnailview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\handler\getmedia.ashx.cs">
+      <DependentUpon>getmedia.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\handler\gettreeview.ashx.cs">
+      <DependentUpon>gettreeview.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\handler\RangeRequestHandlerBase.cs" />
+    <Compile Include="gs\handler\upload.ashx.cs">
+      <DependentUpon>upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\handler\UploadHandler.cs" />
+    <Compile Include="gs\handler\UploadHandlerBase.cs" />
+    <Compile Include="gs\handler\UploadHandlerBaseAsync.cs" />
+    <Compile Include="gs\pages\admin\albums.ascx.cs">
+      <DependentUpon>albums.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\albums.ascx.designer.cs">
+      <DependentUpon>albums.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\backuprestore.ascx.cs">
+      <DependentUpon>backuprestore.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\backuprestore.ascx.designer.cs">
+      <DependentUpon>backuprestore.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\mediatemplates.ascx.cs">
+      <DependentUpon>mediatemplates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\mediatemplates.ascx.designer.cs">
+      <DependentUpon>mediatemplates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\uitemplates.ascx.cs">
+      <DependentUpon>uitemplates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\uitemplates.ascx.designer.cs">
+      <DependentUpon>uitemplates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\css.ascx.cs">
+      <DependentUpon>css.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\css.ascx.designer.cs">
+      <DependentUpon>css.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\metadata.ascx.cs">
+      <DependentUpon>metadata.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\metadata.ascx.designer.cs">
+      <DependentUpon>metadata.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\galleries.ascx.cs">
+      <DependentUpon>galleries.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\galleries.ascx.designer.cs">
+      <DependentUpon>galleries.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\gallerycontrolsettings.ascx.cs">
+      <DependentUpon>gallerycontrolsettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\gallerycontrolsettings.ascx.designer.cs">
+      <DependentUpon>gallerycontrolsettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\gallerysettings.ascx.cs">
+      <DependentUpon>gallerysettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\gallerysettings.ascx.designer.cs">
+      <DependentUpon>gallerysettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\eventlog.ascx.cs">
+      <DependentUpon>eventlog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\eventlog.ascx.designer.cs">
+      <DependentUpon>eventlog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\sitesettings.ascx.cs">
+      <DependentUpon>sitesettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\sitesettings.ascx.designer.cs">
+      <DependentUpon>sitesettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\images.ascx.cs">
+      <DependentUpon>images.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\images.ascx.designer.cs">
+      <DependentUpon>images.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\manageroles.ascx.cs">
+      <DependentUpon>manageroles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\manageroles.ascx.designer.cs">
+      <DependentUpon>manageroles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\manageusers.ascx.cs">
+      <DependentUpon>manageusers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\manageusers.ascx.designer.cs">
+      <DependentUpon>manageusers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\mediaobjects.ascx.cs">
+      <DependentUpon>mediaobjects.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\mediaobjects.ascx.designer.cs">
+      <DependentUpon>mediaobjects.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\mediaobjecttypes.ascx.cs">
+      <DependentUpon>mediaobjecttypes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\mediaobjecttypes.ascx.designer.cs">
+      <DependentUpon>mediaobjecttypes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\usersettings.ascx.cs">
+      <DependentUpon>usersettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\usersettings.ascx.designer.cs">
+      <DependentUpon>usersettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\admin\videoaudioother.ascx.cs">
+      <DependentUpon>videoaudioother.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\admin\videoaudioother.ascx.designer.cs">
+      <DependentUpon>videoaudioother.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeFiles\Entity\Album.cs" />
+    <Compile Include="CodeFiles\Entity\MediaItem.cs" />
+    <Compile Include="CodeFiles\Entity\MetadataItemWebEntity.cs" />
+    <Compile Include="CodeFiles\Entity\SynchStatusWebEntity.cs" />
+    <Compile Include="CodeFiles\Global.cs" />
+    <Compile Include="CodeFiles\MediaObjectHtmlBuilder.cs" />
+    <Compile Include="CodeFiles\Utils.cs" />
+    <Compile Include="gs\pages\changepassword.ascx.cs">
+      <DependentUpon>changepassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\changepassword.ascx.designer.cs">
+      <DependentUpon>changepassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\createaccount.ascx.cs">
+      <DependentUpon>createaccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\createaccount.ascx.designer.cs">
+      <DependentUpon>createaccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\albumtreeview.ascx.cs">
+      <DependentUpon>albumtreeview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\albumtreeview.ascx.designer.cs">
+      <DependentUpon>albumtreeview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\media.ascx.cs">
+      <DependentUpon>media.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\media.ascx.designer.cs">
+      <DependentUpon>media.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\downloadobjects.ascx.cs">
+      <DependentUpon>downloadobjects.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\downloadobjects.ascx.designer.cs">
+      <DependentUpon>downloadobjects.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\error\cannotwritetodirectory.ascx.cs">
+      <DependentUpon>cannotwritetodirectory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\error\cannotwritetodirectory.ascx.designer.cs">
+      <DependentUpon>cannotwritetodirectory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\error\generic.ascx.cs">
+      <DependentUpon>generic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\error\generic.ascx.designer.cs">
+      <DependentUpon>generic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\login.ascx.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\login.ascx.designer.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\myaccount.ascx.cs">
+      <DependentUpon>myaccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\myaccount.ascx.designer.cs">
+      <DependentUpon>myaccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\recoverpassword.ascx.cs">
+      <DependentUpon>recoverpassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\recoverpassword.ascx.designer.cs">
+      <DependentUpon>recoverpassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\addobjects.ascx.cs">
+      <DependentUpon>addobjects.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\addobjects.ascx.designer.cs">
+      <DependentUpon>addobjects.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\assignthumbnail.ascx.cs">
+      <DependentUpon>assignthumbnail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\assignthumbnail.ascx.designer.cs">
+      <DependentUpon>assignthumbnail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\createalbum.ascx.cs">
+      <DependentUpon>createalbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\createalbum.ascx.designer.cs">
+      <DependentUpon>createalbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\deletealbum.ascx.cs">
+      <DependentUpon>deletealbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\deletealbum.ascx.designer.cs">
+      <DependentUpon>deletealbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\deletehires.ascx.cs">
+      <DependentUpon>deletehires.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\deletehires.ascx.designer.cs">
+      <DependentUpon>deletehires.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\deleteobjects.ascx.cs">
+      <DependentUpon>deleteobjects.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\deleteobjects.ascx.designer.cs">
+      <DependentUpon>deleteobjects.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\editcaptions.ascx.cs">
+      <DependentUpon>editcaptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\editcaptions.ascx.designer.cs">
+      <DependentUpon>editcaptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\rotateimage.ascx.cs">
+      <DependentUpon>rotateimage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\rotateimage.ascx.designer.cs">
+      <DependentUpon>rotateimage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\rotateimages.ascx.cs">
+      <DependentUpon>rotateimages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\rotateimages.ascx.designer.cs">
+      <DependentUpon>rotateimages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\synchronize.ascx.cs">
+      <DependentUpon>synchronize.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\synchronize.ascx.designer.cs">
+      <DependentUpon>synchronize.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="gs\pages\task\transferobject.ascx.cs">
+      <DependentUpon>transferobject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gs\pages\task\transferobject.ascx.designer.cs">
+      <DependentUpon>transferobject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GalleryServerPro.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>GalleryServerPro.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\controls\thumbnailview.ascx" />
+    <Content Include="gs\skins\dark\styles\gallery.css" />
+    <Content Include="gs\script\SilverlightControl.js" />
+    <Content Include="gs\script\SilverlightMedia.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj">
+      <Project>{20DFE2A2-2532-4AFE-8B4B-5BE8E3F8492F}</Project>
+      <Name>TIS.GSP.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Business\TIS.GSP.Business.csproj">
+      <Project>{CD3EAF7D-B964-4BAF-BE4D-E2844B4C7A33}</Project>
+      <Name>TIS.GSP.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Events\TIS.GSP.Events.csproj">
+      <Project>{FC3B5E2D-E0AB-47FC-A126-64AA48982947}</Project>
+      <Name>TIS.GSP.Events</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\controls\actionmenu.ascx" />
+    <Content Include="gs\controls\admin\adminfooter.ascx" />
+    <Content Include="gs\controls\admin\adminheader.ascx" />
+    <Content Include="gs\controls\admin\adminmenu.ascx" />
+    <Content Include="gs\controls\albummenu.ascx" />
+    <Content Include="gs\controls\galleryheader.ascx" />
+    <Content Include="gs\controls\task\taskfooter.ascx" />
+    <Content Include="gs\controls\task\taskheader.ascx" />
+    <Content Include="gs\handler\gettreeview.ashx" />
+    <Content Include="gs\pages\admin\albums.ascx" />
+    <Content Include="gs\pages\admin\backuprestore.ascx" />
+    <Content Include="gs\pages\admin\sitesettings.ascx" />
+    <Content Include="gs\pages\admin\images.ascx" />
+    <Content Include="gs\pages\admin\manageroles.ascx" />
+    <Content Include="gs\pages\admin\manageusers.ascx" />
+    <Content Include="gs\pages\admin\mediaobjects.ascx" />
+    <Content Include="gs\pages\admin\mediaobjecttypes.ascx" />
+    <Content Include="gs\pages\admin\videoaudioother.ascx" />
+    <Content Include="gs\pages\changepassword.ascx" />
+    <Content Include="gs\pages\error\cannotwritetodirectory.ascx" />
+    <Content Include="gs\pages\error\generic.ascx" />
+    <Content Include="gs\pages\login.ascx" />
+    <Content Include="gs\pages\myaccount.ascx" />
+    <Content Include="gs\pages\recoverpassword.ascx" />
+    <Content Include="gs\pages\task\addobjects.ascx" />
+    <Content Include="gs\pages\task\assignthumbnail.ascx" />
+    <Content Include="gs\pages\task\createalbum.ascx" />
+    <Content Include="gs\pages\task\deletealbum.ascx" />
+    <Content Include="gs\pages\task\deletehires.ascx" />
+    <Content Include="gs\pages\task\deleteobjects.ascx" />
+    <Content Include="gs\pages\task\editcaptions.ascx" />
+    <Content Include="gs\pages\task\rotateimage.ascx" />
+    <Content Include="gs\pages\task\rotateimages.ascx" />
+    <Content Include="gs\pages\task\synchronize.ascx" />
+    <Content Include="gs\pages\task\transferobject.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\controls\pager.ascx" />
+    <Content Include="gs\pages\admin\eventlog.ascx" />
+    <Content Include="gs\pages\admin\usersettings.ascx" />
+    <Content Include="gs\pages\createaccount.ascx" />
+    <Content Include="gs\pages\task\downloadobjects.ascx" />
+    <Content Include="gs\pages\eula-gpl.htm" />
+    <Content Include="gs\templates\AdminNotificationAccountCreated.txt" />
+    <Content Include="gs\templates\AdminNotificationAccountCreatedRequiresApproval.txt" />
+    <Content Include="gs\templates\UserNotificationAccountCreatedNeedsApproval.txt" />
+    <Content Include="gs\templates\UserNotificationAccountCreatedApprovalGiven.txt" />
+    <Content Include="gs\templates\UserNotificationPasswordRecovery.txt" />
+    <Content Include="gs\templates\UserNotificationPasswordChangedByAdmin.txt" />
+    <Content Include="gs\templates\UserNotificationPasswordChanged.txt" />
+    <Content Include="gs\templates\UserNotificationAccountCreatedNeedsVerification.txt" />
+    <Content Include="gs\templates\UserNotificationAccountCreated.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="CodeFiles\Interfaces\" />
+    <Folder Include="gs\mediaobjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\AudioGray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Basic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Classic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Console.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Expression.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Futuristic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Professional.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gs\xaml\mediaplayer\Simple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\galleryserverpro.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+			 Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>55934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55934/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
